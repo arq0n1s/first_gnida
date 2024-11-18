@@ -15,6 +15,11 @@ class MotoController extends Controller
         }
         dd('end');
     }
+
+    public function create(){
+        
+    }
 }
+
 
 

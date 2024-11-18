@@ -9,12 +9,16 @@ class PostController extends Controller
 {
     public function index(){
        
-        $posts = Post::where('likes','>',1000)->get();
-        echo "the most powerfull posts <br>";
-        foreach($posts as $post){
-            dump($post->id, $post->name);
-        }
-        dd('end, blya');
+        // $posts = Post::where('likes','>',1000)->get();
+        // echo "the most powerfull posts <br>";
+        // foreach($posts as $post){
+        //     dump($post->id, $post->name);
+        // }
+
+        $posts = Post::all();
+        return view('posts', compact('posts'));
+        
+        // dd($posts);
 
     }
 
