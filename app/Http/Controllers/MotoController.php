@@ -9,11 +9,8 @@ class MotoController extends Controller
 {
     public function index(){
 
-        $motos = Moto::where('motor_volume', '>', 650)->get();
-        foreach ($motos as $moto){
-            dump($moto->name);
-        }
-        dd('end');
+        $motos = Moto::all();
+        return view('motos', compact ('motos'));
     }
 
     public function create(){
